@@ -1,5 +1,5 @@
 import { HomeHeaderComponent } from '../../components/home-header/home-header.component';
-import { JobTileComponent } from '../../components/job-tile/job-tile.component';
+import { OfferTileComponent } from '../../components/offer-tile/offer-tile.component';
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
@@ -17,6 +17,6 @@ import { HomePage } from './home.page';
     IonicModule,
     HomePageRoutingModule
   ],
-  declarations: [HomePage, JobTileComponent, HomeHeaderComponent]
+  declarations: [HomePage, OfferTileComponent, HomeHeaderComponent]
 })
 export class HomePageModule {}

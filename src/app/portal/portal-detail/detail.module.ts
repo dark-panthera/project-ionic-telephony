@@ -1,5 +1,5 @@
 import { HomeHeaderComponent } from '../../components/home-header/home-header.component';
-import { JobTileComponent } from '../../components/job-tile/job-tile.component';
+import { OfferTileComponent } from '../../components/offer-tile/offer-tile.component';
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
@@ -17,6 +17,6 @@ import { DetailPage } from './detail.page';
     IonicModule,
     DetailPageRoutingModule
   ],
-  declarations: [DetailPage, JobTileComponent, HomeHeaderComponent]
+  declarations: [DetailPage, OfferTileComponent, HomeHeaderComponent]
 })
 export class DetailPageModule {}

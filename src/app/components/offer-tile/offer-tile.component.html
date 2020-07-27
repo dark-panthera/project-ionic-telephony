@@ -1,0 +1,11 @@
+<ion-item lines="none" class="tile-border status-decline" (click)="onRedirect()">
+  <ion-grid *ngIf="offer" class="ion-no-padding">
+    <ion-row>
+      <ion-col size-xs="8" size-sm="9" size-md="10" class="">
+        <ion-text>
+          <span class="active-status">{{offer.name}}</span>
+        </ion-text>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+</ion-item>
