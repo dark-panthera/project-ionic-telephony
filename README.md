@@ -23,3 +23,23 @@
 
 # Just to give you a heads up, I did not focus much on the UI, but I focused more on the logic.
 
+-----------------------------------------------------------
+
+# How to execute the solution
+
+# Download the repository
+
+# npm install or yarn install to install the packages
+
+# ng serve or ionic serve - both work, but with ionic I prefar to use "ionic serve"
+
+-----------------------------------------------------------
+
+# Alternatives
+
+# If I had more time, I would have focused on purely on Angular 8 + CSS Flexbox and css grid
+
+# I made use of Ionic since they have prefined layout exactly like material.
+
+-----------------------------------------------------------
+
