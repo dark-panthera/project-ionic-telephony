@@ -14,11 +14,11 @@ export class PortalService {
 
   constructor(private http: HttpClient) { }
 
-  getAllSubscriptions(): Observable<SubscriptionModel[]> {
+  getAllSubscriptions(id: number): Observable<SubscriptionModel[]> {
     this.loading.next(true);
 
     return this.http.get(
-      `https://selfcare-service.demo.melita.com/interview/api/offers/100/subscriptions`
+      `https://selfcare-service.demo.melita.com/interview/api/offers/${id}/subscriptions`
     )
       .pipe(
         map((subscriptions: Subscriptions) => {
