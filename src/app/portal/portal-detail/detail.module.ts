@@ -1,4 +1,4 @@
-import { HomeHeaderComponent } from '../../components/home-header/home-header.component';
+import { SharedModule } from './../../shared/shared.module';
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
@@ -15,8 +15,9 @@ import { DetailTileComponent } from 'src/app/components/detail-tile/detail-tile.
     CommonModule,
     FormsModule,
     IonicModule,
-    DetailPageRoutingModule
+    DetailPageRoutingModule,
+    SharedModule
   ],
-  declarations: [DetailPage, DetailTileComponent, HomeHeaderComponent]
+  declarations: [DetailPage, DetailTileComponent]
 })
 export class DetailPageModule {}

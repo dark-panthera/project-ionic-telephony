@@ -19,7 +19,7 @@ export class DetailPage implements OnInit, OnDestroy {
 
   ngOnInit() {
     this.loading$ = this.portalService.loading;
-    
+
     this.subSubscription = this.portalService.getAllSubscriptions().subscribe((subscriptions: SubscriptionModel[]) => {
       this.subscriptions = subscriptions;
     });

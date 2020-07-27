@@ -1,4 +1,4 @@
-import { HomeHeaderComponent } from '../../components/home-header/home-header.component';
+import { SharedModule } from './../../shared/shared.module';
 import { OfferTileComponent } from '../../components/offer-tile/offer-tile.component';
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
@@ -15,8 +15,9 @@ import { HomePage } from './home.page';
     CommonModule,
     FormsModule,
     IonicModule,
-    HomePageRoutingModule
+    HomePageRoutingModule,
+    SharedModule
   ],
-  declarations: [HomePage, OfferTileComponent, HomeHeaderComponent]
+  declarations: [HomePage, OfferTileComponent, ]
 })
 export class HomePageModule {}

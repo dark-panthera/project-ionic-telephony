@@ -2,6 +2,13 @@
 
 <ion-content>
   <ion-grid class="ion-no-margin" >
+    <ion-row>
+      <ion-col offset="4" offset-md="4" offset-lg="5" offset-xl="5">
+        <ion-text color="secondary">
+          <h1 class="header">List of Offers</h1> 
+        </ion-text>
+      </ion-col>
+    </ion-row>
     <ion-row *ngIf="(loading$ | async) as loading; else notloading">
       <ion-col>
         loading ...
