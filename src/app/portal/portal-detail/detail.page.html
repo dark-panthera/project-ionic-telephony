@@ -1,12 +1,20 @@
-<app-home-header [header]="'User Portal'"></app-home-header>
+<app-home-header [hide]="false" [header]="'User Portal'"></app-home-header>
 
 <ion-content>
   <ion-grid class="ion-no-margin">
-
-    <ion-row>
+    <ion-row *ngIf="(loading$ | async) as loading; else notloading">
       <ion-col>
-        <detail-tile *ngFor="let subscription of subscriptions" [subscription]="subscription"></detail-tile>
+        loading ...
       </ion-col>
     </ion-row>
+
   </ion-grid>
 </ion-content>
+
+<ng-template #notloading>
+  <ion-row>
+    <ion-col>
+      <detail-tile *ngFor="let subscription of subscriptions" [subscription]="subscription"></detail-tile>
+    </ion-col>
+  </ion-row>
+</ng-template>

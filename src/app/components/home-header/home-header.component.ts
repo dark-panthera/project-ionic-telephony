@@ -7,6 +7,7 @@ import { Component, OnInit, Input } from '@angular/core';
 })
 export class HomeHeaderComponent implements OnInit {
   @Input() header: string;
+  @Input() hide: boolean;
   
   constructor() { }
 
