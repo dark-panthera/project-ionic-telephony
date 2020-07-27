@@ -1,17 +1,17 @@
 <app-home-header [header]="'User Portal'"></app-home-header>
 
 <ion-content>
-  <ion-grid class="ion-no-margin" *ngIf="loading$ | async;let loading">
-
-    <ion-row *ngIf="!loading">
+  <ion-grid class="ion-no-margin" >
+    <ion-row *ngIf="(loading$ | async) as loading; else notloading">
       <ion-col>
-        <app-offer-tile *ngFor="let offer of offers" [offer]="offer"></app-offer-tile>
-      </ion-col>
-    </ion-row>
-    <ion-row *ngIf="loading">
-      <ion-col>
-        <ion-loading></ion-loading>
+        loading ...
       </ion-col>
     </ion-row>
   </ion-grid>
 </ion-content>
+
+<ng-template #notloading>
+  <ion-col>
+    <app-offer-tile *ngFor="let offer of offers" [offer]="offer"></app-offer-tile>
+  </ion-col>
+</ng-template>

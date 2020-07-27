@@ -10,7 +10,6 @@ import { Observable, Subscription } from 'rxjs';
   styleUrls: ['./home.page.scss'],
 })
 export class HomePage implements OnInit, OnDestroy {
-  // protected offers$: Observable<Offer[]>;
   protected loading$: Observable<boolean>;
   protected offers: Offer[];
 
@@ -20,9 +19,9 @@ export class HomePage implements OnInit, OnDestroy {
 
   ngOnInit() {
     this.loading$ = this.portalService.loading;
-    // this.offers$ = this.portalService.getAllOffers();
     this.subOffer = this.portalService.getAllOffers().subscribe((offers: Offer[]) => {
       this.offers = offers;
+      console.log(offers);
     });
 
   }
