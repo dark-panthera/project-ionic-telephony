@@ -4,7 +4,11 @@ import { PreloadAllModules, RouterModule, Routes } from '@angular/router';
 const routes: Routes = [
   {
     path: '',
-    loadChildren: () => import('./tabs/tabs.module').then(m => m.TabsPageModule)
+    loadChildren: () => import('./portal/portal-home/home.module').then(m => m.HomePageModule)
+  },
+  {
+    path: 'home/:id',
+    loadChildren: () => import('./portal/portal-detail/detail.module').then( m => m.DetailPageModule)
   }
 ];
 @NgModule({

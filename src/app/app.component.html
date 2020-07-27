@@ -1,3 +1,32 @@
 <ion-app>
-  <ion-router-outlet></ion-router-outlet>
+  <ion-menu type="overlay" contentId="main-menu" menuId="main-menu">
+    <ion-header mode="md">
+      <ion-toolbar mode="md" class="home-toolbar">
+        <ion-buttons slot="start" mode="md">
+          <ion-menu-button mode="md">
+            <ion-icon name="eyedrop" color="medium"></ion-icon>
+          </ion-menu-button>
+        </ion-buttons>
+        <ion-title size="small">
+          <div class="ion-text-left">
+            <ion-label class="logo">PANTHERA</ion-label>
+          </div>
+        </ion-title>
+      </ion-toolbar>
+    </ion-header>
+
+    <ion-content>
+      <ion-list>
+        <ion-item class="user-menu-item" lines="none">
+          <ion-avatar slot="start">
+            <img [src]="'https://cdn3.iconfinder.com/data/icons/avatars-round-flat/33/avat-01-512.png'" />
+          </ion-avatar>
+
+        </ion-item>
+      </ion-list>
+
+
+    </ion-content>
+  </ion-menu>
+  <ion-router-outlet id="main-menu"></ion-router-outlet>
 </ion-app>

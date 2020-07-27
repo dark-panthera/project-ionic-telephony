@@ -1,0 +1,9 @@
+<app-home-header [header]="'User Portal'"></app-home-header>
+
+<ion-content>
+  <div *ngIf="offers$ | async; let offers">
+
+    <app-job-tile *ngFor="let offer of offers"></app-job-tile>
+
+  </div>
+</ion-content>
