@@ -17,12 +17,12 @@
 
     <ion-content>
       <ion-list>
-        <ion-item class="user-menu-item" lines="none">
-          <ion-avatar slot="start">
-            <img [src]="'https://cdn3.iconfinder.com/data/icons/avatars-round-flat/33/avat-01-512.png'" />
-          </ion-avatar>
-
-        </ion-item>
+        <ion-menu-toggle menu="main-menu">
+          <ion-item lines="none" [routerLink]="['/']">
+            <ion-icon name="business" slot="start"></ion-icon>
+            <ion-label>Home Page</ion-label>
+          </ion-item>
+        </ion-menu-toggle>
       </ion-list>
 
 
