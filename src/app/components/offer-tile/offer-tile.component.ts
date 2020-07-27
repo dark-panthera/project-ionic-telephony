@@ -1,7 +1,6 @@
 
 import { Component, OnInit, Input } from '@angular/core';
 import { Offer } from 'src/app/portal/offer.model';
-import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-offer-tile',
@@ -12,12 +11,8 @@ export class OfferTileComponent implements OnInit {
   @Input() offer: Offer;
   @Input() redirection: string;
   
-  constructor(private router: Router) {}
+  constructor() {}
 
   ngOnInit() {}
 
-  onRedirect() {
-    console.log('click');
-      this.router.navigate(['home', 100]);
-  }
 }

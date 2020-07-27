@@ -1,8 +1,8 @@
 export interface Subscriptions {
-    subscriptions: Subscription[];
+    subscriptions: SubscriptionModel[];
 }
 
-export interface Subscription {
+export interface SubscriptionModel {
     id: number;
     name: string;
     type: string;

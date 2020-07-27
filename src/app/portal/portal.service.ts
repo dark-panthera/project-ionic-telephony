@@ -1,7 +1,7 @@
 import { Offers, Offer } from './offer.model';
-import { Subscriptions, Subscription } from './subscriptions.model';
+import { Subscriptions, SubscriptionModel } from './subscriptions.model';
 import { Injectable } from '@angular/core';
-import { Subject, BehaviorSubject, Observable } from 'rxjs';
+import { Observable } from 'rxjs';
 import { HttpClient } from '@angular/common/http';
 import { map, tap, switchMap } from 'rxjs/operators';
 
@@ -10,12 +10,9 @@ import { map, tap, switchMap } from 'rxjs/operators';
 })
 export class PortalService {
 
-  private subscriptionsBeh = new BehaviorSubject<Subscription[]>([]);
-  private offersBeh = new BehaviorSubject<Offer[]>([]);
-
   constructor(private http: HttpClient) { }
 
-  getAllSubscriptions(): Observable<Subscription[]> {
+  getAllSubscriptions(): Observable<SubscriptionModel[]> {
     return this.http.get(
       `https://selfcare-service.demo.melita.com/interview/api/offers/100/subscriptions`
     )

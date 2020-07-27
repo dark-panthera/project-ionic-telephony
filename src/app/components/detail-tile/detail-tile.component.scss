@@ -1,0 +1,153 @@
+$border: 1px solid #afaaaa52;
+$shadow: -4px 2px 6px 4px rgba(234, 228, 228, 0.61);
+$title-font-size: 12px;
+
+$header-color: #2694e4;
+
+// status colors
+
+$unplanned-background: #f5f5f5;
+
+$danger-background: #ffecf0;
+$danger-color: #e4264d;
+$danger-border: #e4264d;
+
+$warning-background: #fff8ef;
+$warning-color: #f36818;
+$warning-border: #e5ab03;
+
+$primary-background: #d9dee6;
+$primary-color: #009fe6;
+$primary-border: #009fe6;
+
+$success-background: #f6fff6;
+$success-color: #11530a;
+$success-border: #7fca2f;
+
+.tile {
+    font-size: 14px;
+    vertical-align: sub;
+
+    &-border {
+        border-top: $border;
+        border-bottom: $border;
+        border-right: $border;
+    }
+
+    &-title {
+        margin: 10px 0 2px 0;
+        display: inline-block;
+        font-size: $title-font-size;
+    }
+}
+
+.secondary-title {
+    font-size: 12px;
+    font-weight: 700;
+    color: #3d3b3c;
+}
+
+.float {
+    &-right {
+        float: right;
+    }
+
+    &-left {
+        float: left;
+    }
+}
+
+.clear {
+    clear: both;
+}
+
+.padding-top {
+    padding-top: 5px;
+}
+
+.header-item {
+    color: $header-color;
+    font-weight: 600;
+}
+
+ion-icon {
+    color: $header-color;
+    margin: 0 2px;
+}
+
+.price {
+    color: #7fca2f;
+}
+
+.extvat {
+    font-size: 9px;
+    color: #adadad;
+}
+
+ion-item {
+    box-shadow: $shadow;
+    --box-shadow: $shadow;
+    margin: 0;
+}
+
+.status {
+    font-size: 9px;
+    padding: 0 6px;
+    margin: 0;
+    border-radius: 10px;
+    font-weight: 600;
+
+    &-approved,
+    &-unplanned {
+        border-left: 5px solid $success-border;
+    }
+
+    &-onhold {
+        border-left: 5px solid $primary-border;
+    }
+
+    &-pending,
+    &-sent,
+    &-progress {
+        border-left: 5px solid $warning-border;
+    }
+
+    &-decline,
+    &-draft {
+        border-left: 5px solid $danger-border;
+    }
+}
+
+.unplanned {
+    background: $unplanned-background;
+}
+
+.decline,
+.draft {
+    background: $danger-background;
+    color: $danger-color;
+}
+
+.pending,
+.sent,
+.progress {
+    background: $warning-background;
+    color: $warning-color;
+}
+
+.approved {
+    background: $success-background;
+    color: $success-color;
+}
+
+.onhold {
+    background: $primary-background;
+    color: $primary-color;
+}
+
+.pin {
+    font-size: 12px;
+    margin-right: 0px;
+    position: relative;
+    top: 3px;
+}

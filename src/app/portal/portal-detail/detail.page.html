@@ -1,5 +1,12 @@
 <app-home-header [header]="'User Portal'"></app-home-header>
 
 <ion-content>
-  <app-offer-tile></app-offer-tile>
+  <ion-grid class="ion-no-margin">
+
+    <ion-row>
+      <ion-col>
+        <detail-tile *ngFor="let subscription of subscriptions" [subscription]="subscription"></detail-tile>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
 </ion-content>
